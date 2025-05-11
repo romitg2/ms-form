@@ -3,9 +3,11 @@
 import useMultistepForm from "@/hooks/useMultistepForm";
 import FormPage from "./components/FormPage";
 
+export type FormField = { name: string; label: string; type: string; options?: { label: string; value: string }[] };
+
 export type FormData = {
   title: string;
-  fields: { name: string; label: string; type: string }[];
+  fields: FormField[];
 }
 
 export default function Home() {
@@ -15,7 +17,7 @@ export default function Home() {
       title: "Step 1", fields: [
         { name: "name", label: "Name", type: "text" },
         { name: "age", label: "Age", type: "number" },
-        { name: "gender", label: "Gender", type: "text" },
+        { name: "gender", label: "Gender", type: "select", options: [{ label: "Male", value: "male" }, { label: "Female", value: "female" }] },
       ]
     },
     {
