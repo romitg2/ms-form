@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       title: "Step 3", fields: [
-        { name: "password", label: "Password", type: "password" },
+        { name: "hobbies", label: "Hobbies", type: "multi-select", options: [{ label: "Reading", value: "reading" }, { label: "Gaming", value: "gaming" }, { label: "Coding", value: "coding" }] },
       ]
     },
   ];
